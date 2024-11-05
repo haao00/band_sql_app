@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="header.css">
+  <title>曲検索</title>
+  <style>
+    body {
+      background-image: url(band.png);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    h2 {
+      color: white;
+    }
+    
+    form {
+      margin-top: 50px;
+    }
+    
+    table {
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+
+<body class="search", style="background-color:white;">
+ <!-- header -->
+  <header id="header">
+    <h1>BANDGROUP</font></h1>
+    <nav>
+      <ul>
+        <li><a href="HOME.php">HOME</a></li>
+        <li class="has-child"><a>検索</a>
+          <ul>
+            <li><a href="lyricssearch_form.html">歌詞検索</a></li>
+            <li><a href="songsearch_form.html">曲検索</a></li>
+          </ul>
+        </li>
+        <li><a href="information.php">INFO</a></li>
+      </ul>
+    </nav>
+  </header>
+<?php
+ include(dirname('_FILE_').'/header.php');
+ header('Content-Type:text/html; charset=utf-8');
+ ?><br>
+   <h2 class = "txt2">曲検索</h2>
+
+   <p class = "txt">ここで、曲検索をすることができます！<br>
+    以下で条件を選択して、条件にあう曲を検索しよう！</p>
+    <div class = "form">
+    <h3 align="center">ジャンル選択</h3>
+    <p align="center", class = "txt">ジャンルを一つ選択してください。（選択しない場合は、そのままにする。）</p>
+    <form action = "songsearch_get.php" method = "get">
+     <table align = "center">
+       <tr>
+        <td>
+         <input type = "checkbox" name = "genre[]" size = "40" value ="オルトロック">オルトロック
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <input type = "checkbox" name = "genre[]" size = "40" value ="K−POP">K-POP
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <input type = "checkbox" name = "genre[]" size = "40" value ="邦ロック">邦ロック
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <input type = "checkbox" name = "genre[]" size = "40" value ="R&B">R&B
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <input type = "checkbox" name = "genre[]" size = "40" value ="J−POP">J-POP
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <input type = "checkbox" name = "genre[]" size = "40" value ="ポップロック">ポップロック
+        </td>
+       </tr>
+     </table>
+     <br>
+     
+     <h3 align="center">GROUP選択</h3>
+     <p align="center", class = "txt">グループを一つ選択してください。（選択しない場合は、そのままにする。）</p>
+     <script type = "text/javascript" src = "checkbox.js"></script>
+     <table align="center">
+      
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="文藝天国">文藝天国
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="BLACKPINK">BLACKPINK
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="yonige">yonige
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="羊文学">羊文学
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="Charlie Puth">Charlie Puth
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="the shes gone">the shes gone
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="easpa">easpa
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="RADWIMPS">RADWIMPS
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="ONE OK ROCK">ONE OK ROCK
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="Ado">Ado
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="Vaundy">Vaundy
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="Avril Lavigne">Avril Lavigne
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "name[]" size = "40" value ="BIGBANG">BIGBANG
+        </td>
+       </tr>
+       </table>
+     <br>
+       
+       <h3 align="center">主な活動地域選択</h3>
+       <p align="center", class = "txt">グループが主に活動している地域を一つ選択してください。（選択しない場合は、そのままにする。）</p>
+     <script type = "text/javascript" src = "checkbox.js"></script>
+     <table align="center">
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "country[]" size = "40" value ="日本">日本
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "country[]" size = "40" value ="韓国">韓国
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "country[]" size = "40" value ="アメリカ">アメリカ
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "country[]" size = "40" value ="カナダ">カナダ
+        </td>
+       </tr>
+       </table>
+     <br>
+       
+       <h3 align="center">所属事務所選択</h3>
+       <p align="center", class = "txt">事務所を一つ選択してください。（選択しない場合は、そのままにする。）</p>
+     <script type = "text/javascript" src = "checkbox.js"></script>
+     <table align="center">
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="bungei records">bungei records
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="YGエンターテインメント">YGエンターテインメント
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="有限会社small indies table">有限会社small indies table
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="株式会社SME">株式会社SME
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="ワーナーミュージックジャパン">ワーナーミュージックジャパン
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="株式会社UKプロジェクト">株式会社UKプロジェクト
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="SMエンタテイメント">SMエンタテイメント
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="有限会社voqueting">有限会社voqueting
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="株式会社10969">株式会社10969
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="株式会社クラウドナイン">株式会社クラウドナイン
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="スターダストレコーズ">スターダストレコーズ
+        </td>
+       </tr>
+       
+       <tr>
+        <td>
+         <input type = "checkbox" name = "managementoffice[]" size = "40" value ="アリスタ・レコード">アリスタ・レコード
+        </td>
+       </tr>
+       </table>
+     <br>
+     
+     </table>
+     <br>
+    <div style="text-align: center;">
+     <input type = "submit" value = "検索">
+     </div>
+     
+     </form>
+     </div>
+     <br>
+      <?php
+     include(dirname('_FILE_'), '/footer.php);
+     ?>
+   </body>
+ </html>
+ 
+ 
+
+
+

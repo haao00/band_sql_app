@@ -1,0 +1,194 @@
+body{
+    margin:0% 5%;
+}
+
+.text-line {
+  font-size: 2.5rem;
+  font-style: italic;
+ 
+  color: black;
+  text-shadow: -4px 3px 0 white, -8px 6px 0 #000;
+}
+}
+}
+ 
+
+
+
+.txt{
+    padding:0% 5%;
+}
+
+.txt2{
+  color:white;
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+.txt2:before, .txt2:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+}
+.txt2:before {
+  left: 7px;
+}
+
+.txt2:after {
+  right: 7px;
+}
+
+.hover img {
+    transition: 0.2s ;
+}
+
+.hover img:hover {
+    opacity: 0.7 ;
+}
+
+.hover , .details{
+    margin:50px auto;
+  text-align: center;   
+}
+
+.details{
+ border-collapse: collapse;
+}
+
+.hover td, .details td{
+    padding:3px 10px;
+    
+}
+
+.details th{
+    padding:3px 10px;
+    color: #EEEEEE;/*文字色*/
+    background: #333333;/*背景色*/
+    
+}
+
+.details th, .details td{
+ border: solid 1px #333333;
+}
+
+.home2 h3{
+  position: relative;
+  line-height: 1.4;
+  padding:0.25em 1em;
+  display: inline-block;
+  top:0;
+
+}
+
+.home2 h3:before, .home2 h3:after { 
+  position: absolute;
+  top: 0;
+  content:'';
+  width: 8px;
+  height: 100%;
+  display: inline-block;
+}
+.home2 h3:before {
+  border-left: solid 1px black;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  left: 0;
+}
+.home2 h3:after {
+  content: '';
+  border-top: solid 1px black;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;
+  right: 0;
+}
+
+.home2  h3 a , table a{
+    color: #000;
+    text-decoration: none;
+}
+
+.home2  h3 a:hover, table a:hover{
+    color: #808080;
+}
+
+
+.home2 h4 {
+ text-align:center;
+}
+
+
+
+.home2 table{
+    margin-right: auto;
+    margin-left: auto;
+}
+.home2 table td{
+    padding:5px 10px;
+}
+
+.submit{
+    margin:0 auto;
+}
+
+.cp_ipselect {
+  
+  width: 200px;
+  margin: 2em auto;
+  text-align: center;
+}
+.cp_ipselect select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect.cp_sl01 {
+  position: relative;
+  border-radius: 2px;
+  border: 2px solid skyblue;
+  border-radius: 50px;
+  background: #ffffff;
+}
+.cp_ipselect.cp_sl01::before {
+  position: absolute;
+  top: 0.8em;
+  right: 0.8em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid skyblue;
+  pointer-events: none;
+}
+.cp_ipselect.cp_sl01 select {
+  padding: 8px 38px 8px 8px;
+  color: black;
+}
+
+.kakomi-maru1 {
+ margin: 2em auto;  
+ padding: 1em;
+ width: 75%; /*幅の調節*/
+ color: #000; /*文字色*/
+ background-color: #f7f7f7; /*背景色*/
+ border: 2px solid #ccc; /*線の太さ・色*/
+ border-radius: 8px; /*角の丸み*/ 
+}

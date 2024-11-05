@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="header.css">
+  <title>歌詞検索</title>
+  <style>
+    body {
+      background-image: url(band背景.png);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    h2 {
+      color: white;
+    }
+    
+    form {
+      margin-top: 50px;
+      text-align: center;
+    }
+    
+    table {
+      margin: 0 auto;
+    }
+    
+    input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- header -->
+  <header id="header">
+    <h1><font color="white">BANDGROUP</font></h1>
+    <nav>
+      <ul>
+        <li><a href="HOME.php">HOME</a></li>
+        <li class="has-child"><a>検索</a>
+          <ul>
+            <li><a href="lyricssearch_form.html">歌詞検索</a></li>
+            <li><a href="songsearch_form.html">曲検索</a></li>
+          </ul>
+        </li>
+        <li><a href="information.php">INFO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h2>ここでは、歌詞の一部を入力することで曲を検索することができます！</h2>
+  <form action="lyricssearch_get.php" method="get">
+    <table>
+      <tr>
+        <td valign="top">歌詞:</td>
+        <td>
+          <input type="text" name="lyrics" size="10">
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="検索" style="margin-top: 20px;">
+  </form>
+</body>
+
+</html>
